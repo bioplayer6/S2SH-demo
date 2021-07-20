@@ -17,62 +17,96 @@ e)新闻列表显示时可分页显示（可选）
 f)要求用户登录、发布新闻类型以及发布新闻时进行标题、内容等项目的前端和后端数据非空有效性校验，另外要求新闻必须属于某个类型。
 
 项目截图
-Web.xml
-
-ApplicationContext.xml
 
 数据库配置文件db.properties
+![image](https://user-images.githubusercontent.com/72901123/126278069-0644f51b-1dd3-4ae4-96e4-8441e4fd2422.png)
 
 Hibernate.cfg.xml
+![image](https://user-images.githubusercontent.com/72901123/126278109-c5c6c905-9f34-451c-9630-db800ad6d58e.png)
+
 
 Struts配置文件struts.xml
+![image](https://user-images.githubusercontent.com/72901123/126278133-4d484e04-c6eb-4b93-8c75-fb6cf7f79d30.png)
 
-Pojo层采用的是映射文件的方式
 Category新闻类型类
+![image](https://user-images.githubusercontent.com/72901123/126278409-43ff95a0-250d-4f52-9792-f231d0d55e84.png)
+
 
 News新闻类
+![image](https://user-images.githubusercontent.com/72901123/126278444-ddbd8662-849e-43fb-b257-9f86eaabb5ae.png)
+
 
 Category.hbm.xml
+![image](https://user-images.githubusercontent.com/72901123/126278459-0337da0a-176d-47a8-a5b3-56150217217b.png)
+
 
 News.hbm.xml
+![image](https://user-images.githubusercontent.com/72901123/126278477-8fd6afec-03ca-40b8-9bcd-a2858d47617a.png)
+
 
 Dao层采用的是依赖注入hibernateTemplate，让hibernateTemplate处理持久化操作
 CategoryDaoImpl类
+![image](https://user-images.githubusercontent.com/72901123/126278517-2cfa1ab9-6de2-46de-853e-69fcd66be5d4.png)
+
 
 NewsDaoImpl类
+![image](https://user-images.githubusercontent.com/72901123/126278533-0573c3fd-ef99-4eae-956f-995e6ea7544d.png)
 
 Service层
 CategoryServiceImpl
+![image](https://user-images.githubusercontent.com/72901123/126278563-ccec7dbb-d866-42c3-b177-f223c9ef214c.png)
+
 
 NewsServiceImpl
+
 
 Action层(Controller层)
 关键部分代码
 CategoryAction
+![image](https://user-images.githubusercontent.com/72901123/126278631-58590b72-b46f-4695-bf7e-31864a19abd9.png)
 
 
 NewsAction
+![image](https://user-images.githubusercontent.com/72901123/126278656-1034853e-ecbc-470d-b7c7-f2ae9384b9af.png)
 
 
 LoginAction(对数据非空有效性验证)
+![image](https://user-images.githubusercontent.com/72901123/126278681-c5c3c2fd-6837-46df-a7d3-378fae146310.png)
+
 
 前台页面
 
+
 项目运行截图
+![image](https://user-images.githubusercontent.com/72901123/126278748-b3c861b9-2f8e-4405-9a52-66838ad5749b.png)
 
 对标题模糊查询
+![image](https://user-images.githubusercontent.com/72901123/126278772-93d5028d-dea5-4652-996b-c0566c371321.png)
 
 点击发布时间查询，得到对应时间的新闻
+![image](https://user-images.githubusercontent.com/72901123/126278812-86711cf9-4e54-4859-a2a8-878cb8c65db5.png)
 
 点击图片或标题超链接，跳转
+![image](https://user-images.githubusercontent.com/72901123/126278832-7d5c4ed1-3385-42b3-845d-fb3f9559ed49.png)
 
 
 按新闻类型分块列表显示每类新闻
+![image](https://user-images.githubusercontent.com/72901123/126278870-b3210f68-85fe-4273-ad02-e83194ec0397.png)
+![image](https://user-images.githubusercontent.com/72901123/126278881-10f8f2d4-2176-4641-bbd1-79ac8c4eb043.png)
 
 
 登录页面(非空错误验证)
+![image](https://user-images.githubusercontent.com/72901123/126278906-1cffbdf4-0c3a-4781-b786-305dc574c6b7.png)
 
 后台
+![image](https://user-images.githubusercontent.com/72901123/126279042-b699dc50-7455-451f-b31e-8fd166e9a2c8.png)
+![image](https://user-images.githubusercontent.com/72901123/126279055-84ae291f-1b2f-4c88-9770-ee0a284a50ca.png)
+![image](https://user-images.githubusercontent.com/72901123/126279071-0bc868f6-845c-4a5f-8b73-ccc93b11d0c2.png)
+![image](https://user-images.githubusercontent.com/72901123/126279086-d8f181e9-d1a5-45ae-bd16-85f9d585b07b.png)
+![image](https://user-images.githubusercontent.com/72901123/126279104-9d5efafc-5934-4d48-8553-5214ae0860a3.png)
+
+
+
 
 
 
