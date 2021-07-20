@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" 
+ "http://struts.apache.org/dtds/struts-2.5.dtd">
+ <struts>
+     <package name="zonghe" extends="struts-default" namespace="/s2h">    
+           <action name="*" class="com.zonghe.action.CategoryAction" method="{1}">
+                 <result name="list">/categoryList.jsp</result>
+                 <result name="success" type="redirectAction">
+                     <param name="actionName">listCategory</param>
+                     <param name="namespace">/s2h</param>
+                 </result>
+                 <result name="update">/categoryUpdate.jsp</result>
+                 <allowed-methods>addCategory,updateCategory,updatedCategory,deleteCategory,listCategory</allowed-methods>
+           </action>    
+     </package>
+     <package name="zonghe1" extends="struts-default" namespace="/s3h">
+         <action name="*" class="com.zonghe.action.NewsAction" method="{1}">
+                 <result name="list">/newList.jsp</result>
+                 <result name="success" type="redirectAction">
+                     <param name="actionName">listNews</param>
+                     <param name="namespace">/s3h</param>
+                 </result>
+                 <result name="add">/newAdd.jsp</result>
+                 <result name="update">/newUpdate.jsp</result>
+                 <result name="show">/newShow.jsp</result>
+                 <result name="find">//newList.jsp</result>
+                 <allowed-methods>addNews,addedNews,listNews,deleteNews,updateNews,updatedNews,showNews,findNews</allowed-methods>
+           </action>    
+     </package>
+ </struts>
+ 

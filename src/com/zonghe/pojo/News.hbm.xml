@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.zonghe.pojo">
+	<class name="News" table="news">
+		<id name="id" type="integer">
+			<generator class="native"/>
+		</id>
+		<property name="title" length="100" not-null="true"/>
+		<property name="content" length="100" not-null="true"/> 	
+		<property name="issueTime"/> 
+		<property name="origin" not-null="true" length="50"/> 
+		<many-to-one name="category" class="com.zonghe.pojo.Category" column="cid" lazy="false"/>	
+	</class>
+</hibernate-mapping>
